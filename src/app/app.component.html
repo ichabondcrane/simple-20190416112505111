@@ -1,0 +1,25 @@
+<div class="">
+        <mat-table [dataSource]="dataSource">
+      
+          <ng-container matColumnDef="ID">
+            <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+            <mat-cell *matCellDef="let post"> {{post.ID}} </mat-cell>
+          </ng-container>
+      
+          <ng-container matColumnDef="STATUS">
+            <mat-header-cell *matHeaderCellDef> STATUS </mat-header-cell>
+            <mat-cell *matCellDef="let post"> {{post.STATUS}} </mat-cell>
+          </ng-container>
+      
+          <ng-container matColumnDef="DESCRIPTION">
+            <mat-header-cell *matHeaderCellDef> DESCRIPTION </mat-header-cell>
+            <mat-cell *matCellDef="let post"> {{post.DESCRIPTION}} </mat-cell>
+          </ng-container>
+      
+          
+      
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      
+        </mat-table>
+      </div>
